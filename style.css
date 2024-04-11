@@ -1,0 +1,256 @@
+/* General Styles */
+
+@font-face {
+    font-family: Hanken;
+    src: url(assets/fonts/HankenGrotesk-VariableFont_wght.ttf);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Hanken;
+}
+
+/* Main Container Styles */
+
+.container {
+    position: relative;
+    display: flex;
+    margin: 145px auto;
+    width: 600px;
+}
+
+/* Results Container Styles */
+
+.results-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 400px;
+    background: linear-gradient(rgb(115, 56, 252), rgb(2, 35, 221));
+    border-radius: 25px;
+    z-index: 1;
+}
+
+.result-title {
+    font-size: 19px;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.grade-circle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 150px;
+    background: linear-gradient(rgba(42, 22, 158, 0.7), rgba(94, 61, 214, 0.027));
+    border-radius: 50%;
+    margin: 30px 0 25px 0;
+}
+
+.grade {
+    font-size: 50px;
+    font-weight: 700;
+    color: white;
+}
+
+.maximum-grade {
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.grade-rate {
+    font-size: 30px;
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+    margin-bottom: 20px;
+}
+
+.information {
+    width: 210px;
+    font-size: 15px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* Summary Container Styles */
+
+.summary-container {
+    position: absolute;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 400px;
+    padding-left: 25px;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    box-shadow: 1px 12px 20px rgba(0, 110, 255, 0.15);
+}
+
+.summary-title {
+    font-size: 19px;
+    font-weight: 700;
+    color: rgb(10, 0, 65);
+    margin-bottom: 25px;
+}
+
+.skills-container-1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 220px;
+    height: 40px;
+    background-color: rgba(255, 194, 80, 0.08);
+    border-radius: 10px;
+    margin-bottom: 15px;
+    padding: 0 8px;
+}
+
+.skills-container-2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 220px;
+    height: 40px;
+    background-color: rgba(70, 57, 255, 0.08);
+    border-radius: 10px;
+    margin-bottom: 15px;
+    padding: 0 8px;
+}
+
+.icon-container {
+    display: flex;
+}
+
+.icon-container img {
+    width: 17px;
+    margin-right: 8px;
+}
+.icon-container p {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.skill-name-1 {
+    color: rgb(216, 48, 19);
+}
+
+.skill-name-2 {
+    color: rgb(238, 175, 2);
+}
+
+.skill-name-3 {
+    color: rgb(2, 201, 134);
+}
+
+.skill-name-4 {
+    color: rgb(19, 49, 216);
+}
+
+
+.point {
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.point span {
+    color: rgba(126, 126, 126, 0.8);
+}
+
+.summary-container button {
+    width: 235px;
+    height: 45px;
+    font-weight: 600;
+    color: white;
+    background-color: rgb(52, 52, 88);
+    border: none;
+    border-radius: 25px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.summary-container button:hover {
+    background-color: rgb(65, 65, 112);
+}
+
+.summary-container button:active {
+    background: linear-gradient(rgb(98, 8, 216), rgb(53, 0, 243));
+    background-repeat: no-repeat;
+    background-attachment:local;
+}
+
+/* Media Query */
+
+@media (max-width: 580px) {
+    
+    body {
+        overflow-x: hidden;
+    }
+
+    .container {
+        width: 100%;
+        margin: 0;
+    }
+
+    .results-container {
+        width: 100%;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    }
+
+    .information {
+        width: 300px;
+        font-size: 17px;
+    }
+
+    .summary-container {
+        top: 400px;
+        left: 0;
+        width: 100%;
+        padding-left: 30px;
+        margin: 0;
+    }
+
+    .summary-title {
+        align-self: flex-start;
+    }
+
+    .skills-container-1 {
+        width: 90%;
+        height: 50px;
+    }
+
+    .skills-container-2 {
+        width: 90%;
+        height: 50px;
+    }
+
+    .icon-container img {
+        width: 20px;
+    }
+
+    .icon-container p {
+        font-size: 16px;
+    }
+
+    .point {
+        font-size: 17px;
+    }
+
+    .summary-container button {
+        font-size: 18px;
+        height: 55px;
+        width: 85%;
+        border-radius: 35px;
+        margin-top: 5px;
+    }
+}
